@@ -40,6 +40,14 @@ jobs:
         run: npm test --coverage
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
+      - with:
+          args: >
+            -Dsonar.sources=src
+            -Dsonar.tests=src
+            -Dsonar.test.inclusions=src/**/__tests__/**
+            -Dsonar.exclusions=src/**/__tests__/**
+            -Dsonar.javascript.lcov.reportPaths=./coverage/lcov.info
+            -Dsonar.coverage.exclusions=__mocks__/**,.storybook/**,src/stories/**,src/types/**, src/**/__tests__/**, src/reportWebVitals.js, src/index.js
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets. SONAR_TOKEN }}
