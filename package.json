@@ -40,7 +40,8 @@
       "src/**/*.{js,jsx}",
       "!<rootDir>/node_modules/",
       "!src/reportWebVitals.js",
-      "!src/index.js"
+      "!src/index.js",
+      "!src/*.test.{js,jsx}"
     ]
   }
 }
