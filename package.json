@@ -41,7 +41,7 @@
       "!<rootDir>/node_modules/",
       "!src/reportWebVitals.js",
       "!src/index.js",
-      "!src/*.test.{js,jsx}"
+      "!src/*.test.js"
     ]
   }
 }
